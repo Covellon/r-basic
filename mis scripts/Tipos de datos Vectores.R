@@ -52,12 +52,12 @@ nchar (Nombres)
 
 # Si queremos agregar un nuevo video con su nueva cantidad de vistas... En consola aparecen todos.
 
-vistas= c(vistas, 5600)
+vistas=c(5600)
 vistas
 Nombres=c(Nombres, "Video 8")
 Nombres
 
-# Le pones nobre a las entradas de un vector para que coincidan vistas con vectores. La variable es vistas. 
+# Le pones nombre a las entradas de un vector para que coincidan vistas con vectores. La variable es vistas. 
 # Resultado en consola al dar run a vistas aparecen los videos con sus vistas.
 names(vistas)=Nombres
 vistas
@@ -73,6 +73,7 @@ sort(vistas)
 ?sort
 
 sort(vistas, decreasing=TRUE)
+
 
 
 
