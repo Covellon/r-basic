@@ -138,17 +138,41 @@ split
 any(split=="O")
 
 
+# ---------------------------Vectores Aleatorios-----------------------------------------------
+
+# Creamos una variable que se llama resultados cuyos atributos son "victoria" Y "derrota" y luego con la función sample lo puedo ordenar aleatoriamente
+# Además podemos aleatorizar con un número de muestras definidas agrgando a sample, size, si le pogo uno elige al azhar derrota o victoria. si le pongo un tamaño mayor 
+# al de la muestra, obvio que da error.Sinembargo agregando la función replace = TRUE puede aumentar la muestra con los 2 atributos dados
+# También podemos ponerle un peso relativo de aparición en la muestra de determinado atributo, Ej que victoria aparezca en el 5% y victoria en el 95% agrgando la funciòn prob
+
+resultados=c("victoria","derrota")
+sample(resultados)
+sample(resultados, size=1)
+sample(resultados, size=10, replace = TRUE)
+sample(resultados, size = 10, replace = TRUE, prob = c(0.05,0.95))
 
 
+# Puedo pedir una distribución aleatoria. Ej: una distribución de 20 elementos de 0 a 2 con la función runif
+# Me va a dar en consola un montòn de números aleatorizados entre el 0 y el 2
+
+runif(n=20, min=0, max=2)
+
+# Podemos hacer una distribución normal con n 20, media 15 y desvio estándar de 2 con rnorm, mean y sd
+
+rnorm(n = 20, mean = 15, sd = 2)
+plot(rnorm(n = 20, mean = 15, sd = 2))
+
+# Podemos hacer una distribución al azar con 20 valores, ditribución tipo Bernoulli con una p de 0.5
+
+rbinom(n = 20, size = 1 , p = 0.5)
+  
+#  Podemos hacer nua distribución de 20 elementos con una distribución binomial con una p igual a 0,5
+
+rbinom(n = 20, size = 5, p = 0.5)
 
 
-
-
-
-
-
-
-
+#  Las distribuciones al azar no son realmente al azar sino que dependen de una función que se conoce como semilla
+# Fijando la semilla.
 
 
 
